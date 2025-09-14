@@ -1,0 +1,12 @@
+@keyframes wobbleHero {
+  0%, 100% { transform: rotate(0deg); }
+  15% { transform: rotate(-8deg); }
+  30% { transform: rotate(8deg); }
+  45% { transform: rotate(-6deg); }
+  60% { transform: rotate(6deg); }
+  75% { transform: rotate(-4deg); }
+}
+
+.wobbleHero {
+  animation: wobbleHero 1s ease-in-out infinite;
+}

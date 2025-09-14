@@ -1,0 +1,5 @@
+export {default as BuyNow} from './buynow/BuyNow'
+export {default as NavBar} from './navbar/NavBar'
+export {default as CardIntro} from './cardintro/CardIntro'
+export {default as CountDown} from './countdown/CountDown'
+export {default as AutoSlider} from './autoslide/AutoSlide'
