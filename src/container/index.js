@@ -1,6 +1,6 @@
 export {default as Art} from './art/Art'
 export {default as Contact} from './contact/Contact'
 export {default as HeroBanner} from './herobanner/HeroBanner'
-export {default as Hinglight} from './highlight/Hinglight'
+export {default as Hinglight} from './highlight/HingLight'
 export {default as TimeLine} from './timeline/TimeLine' 
 export {default as TicketForm} from './book/TicketForm'
