@@ -14,7 +14,7 @@ const TicketForm = () => {
   useEffect(() => {
     async function fetchTickets() {
       try {
-        const res = await fetch("/api/admin/tickets");
+        const res = await fetch("/api/tickets");
         const data = await res.json();
 
         // Map dữ liệu về format bạn muốn
