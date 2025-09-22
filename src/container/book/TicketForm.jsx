@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
 
+const BASE_URL = "https://jyv6dmhcc7.execute-api.us-east-1.amazonaws.com/prd";
+
+
 const TicketForm = () => {
   const [selected, setSelected] = useState(null);
   const [name, setName] = useState("");
@@ -14,12 +17,12 @@ const TicketForm = () => {
   useEffect(() => {
     async function fetchTickets() {
       try {
-        const res = await fetch("/api/tickets");
+        // const res = await fetch("./api/tickets");
+        const res = await fetch(`${BASE_URL}/tickets`);
         const data = await res.json();
 
-        // Map dữ liệu về format bạn muốn
         const formatted = data.map((item, index) => ({
-          id: index, // có thể dùng index hoặc ticket_type
+          id: index,
           name: item.ticket_type,
           price: `${item.price.toLocaleString("vi-VN")} VND`,
           left: `${item.remaining_quantity}/${item.total_quantity} còn lại`,

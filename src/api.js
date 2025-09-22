@@ -6,9 +6,10 @@ const BASE_URL = "https://jyv6dmhcc7.execute-api.us-east-1.amazonaws.com/prd";
 //   return res.json();
 // }
 export async function listTickets() {
+  alert("Fetching tickets from API...");
   const res = await fetch(`${BASE_URL}/tickets`);
-  const data = await res.json();   // phải await ở đây
-  console.log(data);               // log ra dữ liệu thực tế
+  const data = await res.json();
+  console.log(data);
   return data;
 }
 
