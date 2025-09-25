@@ -22,7 +22,7 @@ const TicketForm = () => {
         const data = await res.json();
 
         const formatted = data.map((item, index) => ({
-          id: index,
+          id: item.ticket_type,
           name: item.ticket_type,
           price: `${item.price.toLocaleString("vi-VN")} VND`,
           left: `${item.remaining_quantity}/${item.total_quantity} còn lại`,
@@ -54,6 +54,7 @@ const TicketForm = () => {
     setErrors(e);
     if (Object.keys(e).length === 0) {
       setSuccess("Đăng ký thành công!");
+       setTimeout(() => setSuccess(""), 3000);
       setSelected(null);
       setName("");
       setDob("");
